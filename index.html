@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tied & Touched | Hair Accessories</title>
+  <meta name="description" content="Tied & Touched — cute, trendy hair accessories. Little clips, Big happiness.">
+  <style>
+    :root{
+      --pink:#d96b88; --deep:#4a1d22; --cream:#fff8f3; --soft:#f9e4df;
+      --rose:#f4c8c5; --white:#fffdfb; --shadow:0 16px 45px rgba(75,29,34,.12);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Georgia,"Times New Roman",serif;background:var(--cream);color:var(--deep);line-height:1.55}
+    a{text-decoration:none;color:inherit}
+    .topbar{background:var(--deep);color:#fff;padding:9px 18px;text-align:center;font-size:13px;letter-spacing:.4px}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,248,243,.96);backdrop-filter:blur(10px);border-bottom:1px solid #f0d8d2}
+    .nav{max-width:1180px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-size:30px;font-weight:700;line-height:1;color:var(--deep)}
+    .brand small{display:block;font-family:Arial,sans-serif;font-size:10px;letter-spacing:3px;text-align:center;margin-top:7px;color:var(--pink)}
+    .navlinks{display:flex;gap:24px;font-family:Arial,sans-serif;font-size:14px}
+    .navlinks a:hover{color:var(--pink)}
+    .navcta{background:var(--pink);color:white;padding:10px 16px;border-radius:999px;font-family:Arial,sans-serif;font-weight:700}
+    .hero{max-width:1180px;margin:24px auto 0;padding:0 18px}
+    .hero img{width:100%;display:block;border-radius:28px;box-shadow:var(--shadow)}
+    .actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:20px 0 12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;border-radius:999px;font-family:Arial,sans-serif;font-weight:700;font-size:14px;border:1px solid var(--pink)}
+    .btn.primary{background:var(--pink);color:#fff}
+    .btn.secondary{background:#fff;color:var(--deep)}
+    .section{max-width:1180px;margin:78px auto;padding:0 22px}
+    .section-title{text-align:center;margin-bottom:12px;font-size:36px}
+    .section-sub{text-align:center;color:#77595c;margin:0 auto 32px;max-width:650px}
+    .collections{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 10px 30px rgba(75,29,34,.08);border:1px solid #f0ddd8}
+    .card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+    .card-body{padding:18px}
+    .eyebrow{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:1.5px;font-size:11px;color:var(--pink);font-weight:700}
+    .card h3{font-size:23px;margin:4px 0 6px}
+    .price{font-family:Arial,sans-serif;font-weight:800;font-size:18px}
+    .desc{color:#73575a;font-size:14px;margin:7px 0 15px}
+    .mini-btn{display:inline-block;background:var(--deep);color:white;padding:10px 15px;border-radius:999px;font-family:Arial,sans-serif;font-size:13px;font-weight:700}
+    .banner{background:#f6ded9;border-radius:26px;padding:18px;box-shadow:var(--shadow)}
+    .banner img{width:100%;display:block;border-radius:18px}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+    .about-copy{background:#fff;padding:34px;border-radius:26px;box-shadow:0 10px 30px rgba(75,29,34,.07)}
+    .about-copy h2{font-size:35px;margin-bottom:10px}
+    .about-copy p{color:#73575a;margin-bottom:14px}
+    .feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+    .feature{background:#fff;border:1px solid #f0ddd8;border-radius:18px;padding:20px;text-align:center}
+    .feature b{display:block;margin-bottom:5px}
+    .feature span{font-size:13px;color:#795d60}
+    .contact{background:var(--deep);color:white;border-radius:28px;padding:42px 26px;text-align:center}
+    .contact p{opacity:.85;margin:8px auto 22px;max-width:650px}
+    .contact .btn.secondary{color:var(--deep)}
+    footer{padding:35px 20px;text-align:center;color:#806366;font-family:Arial,sans-serif;font-size:13px}
+    .socials{display:flex;justify-content:center;gap:18px;margin-top:12px}
+    .socials a{color:var(--pink);font-weight:700}
+    @media(max-width:850px){
+      .navlinks{display:none}.collections{grid-template-columns:1fr 1fr}
+      .about{grid-template-columns:1fr}.feature-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:560px){
+      .brand{font-size:24px}.nav{padding:13px 15px}.navcta{padding:9px 12px}
+      .hero{margin-top:14px;padding:0 10px}.hero img{border-radius:18px}
+      .section{margin:55px auto;padding:0 14px}.section-title{font-size:29px}
+      .collections{grid-template-columns:1fr}.feature-grid{grid-template-columns:1fr 1fr}
+      .about-copy{padding:25px}.about-copy h2{font-size:29px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">🎀 Little clips, Big happiness • Tied & Touched</div>
+
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#">Tied & Touched<small>HAIR ACCESSORIES</small></a>
+      <div class="navlinks">
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="navcta" href="https://wa.me/919514314625?text=Hi%20Tied%20%26%20Touched%2C%20I%27d%20like%20to%20shop." target="_blank">Shop Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="images/launch.png" alt="Tied & Touched hair accessories launch">
+      <div class="actions">
+        <a class="btn primary" href="#collections">Shop Now</a>
+        <a class="btn secondary" href="https://www.instagram.com/tied_and_touched/" target="_blank">Instagram</a>
+        <a class="btn secondary" href="https://wa.me/919514314625?text=Hi%20Tied%20%26%20Touched%2C%20I%27d%20like%20to%20shop." target="_blank">WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="section" id="collections">
+      <h2 class="section-title">Shop Our Collections ♡</h2>
+      <p class="section-sub">Cute little details made to make your everyday hair days prettier.</p>
+
+      <div class="collections">
+        <article class="card">
+          <img src="images/collection-collage.png" alt="Satin bow collection">
+          <div class="card-body">
+            <div class="eyebrow">Best Seller</div>
+            <h3>Satin Bows</h3>
+            <div class="price">Starting from ₹99</div>
+            <p class="desc">Classic, elegant and timeless bows for every mood.</p>
+            <a class="mini-btn" href="https://wa.me/919514314625?text=Hi%20Tied%20%26%20Touched%2C%20I%27m%20interested%20in%20Satin%20Bows." target="_blank">Shop Now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/floral-clips.jpg" alt="Floral hair clips">
+          <div class="card-body">
+            <div class="eyebrow">Fresh & Cute</div>
+            <h3>Flora Clips</h3>
+            <div class="price">Combo price coming soon</div>
+            <p class="desc">Pretty floral clips in playful colours for an easy cute look.</p>
+            <a class="mini-btn" href="https://wa.me/919514314625?text=Hi%20Tied%20%26%20Touched%2C%20I%27m%20interested%20in%20Flora%20Clips%20Combo." target="_blank">Ask on WhatsApp</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/mini-claws.jpg" alt="Mini claw clips">
+          <div class="card-body">
+            <div class="eyebrow">Everyday</div>
+            <h3>Mini Claw Clips</h3>
+            <div class="price">Message for price</div>
+            <p class="desc">Small clips, big vibes — easy for everyday styling.</p>
+            <a class="mini-btn" href="https://wa.me/919514314625?text=Hi%20Tied%20%26%20Touched%2C%20I%27m%20interested%20in%20Mini%20Claw%20Clips." target="_blank">Shop Now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/collection-collage.png" alt="Pearl and stone bows">
+          <div class="card-body">
+            <div class="eyebrow">Elegant</div>
+            <h3>Pearl & Stone Bows</h3>
+            <div class="price">Message for price</div>
+            <p class="desc">A little shine for moments that deserve something extra.</p>
+            <a class="mini-btn" href="https://wa.me/919514314625?text=Hi%20Tied%20%26%20Touched%2C%20I%27m%20interested%20in%20Pearl%20%26%20Stone%20Bows." target="_blank">Shop Now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/star-clips.jpg" alt="Heart bead clips and cute clips">
+          <div class="card-body">
+            <div class="eyebrow">Little Hearts</div>
+            <h3>Heart Bead Clips</h3>
+            <div class="price">Message for price</div>
+            <p class="desc">Little hearts, big smiles — cute details for your hairstyle.</p>
+            <a class="mini-btn" href="https://wa.me/919514314625?text=Hi%20Tied%20%26%20Touched%2C%20I%27m%20interested%20in%20Heart%20Bead%20Clips." target="_blank">Shop Now</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="banner">
+        <img src="images/collection-collage.png" alt="Tied & Touched collection showcase">
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="about">
+        <div class="about-copy">
+          <div class="eyebrow">Tied & Touched</div>
+          <h2>Little details. Big difference. ♡</h2>
+          <p>Welcome to Tied & Touched — a cute little space for hair accessories that add a special touch to everyday looks.</p>
+          <p>From playful clips to elegant bows, find a little something for every mood.</p>
+          <a class="btn primary" href="https://wa.me/919514314625?text=Hi%20Tied%20%26%20Touched%2C%20I%27d%20like%20to%20shop." target="_blank">Shop Now</a>
+        </div>
+        <img src="images/soft-plush.jpg" alt="Soft plush hair clips" style="width:100%;border-radius:26px;box-shadow:var(--shadow)">
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature"><b>♡ Trendy</b><span>Styles you'll love</span></div>
+        <div class="feature"><b>✦ Cute</b><span>Little happy details</span></div>
+        <div class="feature"><b>✧ Everyday</b><span>Easy to style</span></div>
+        <div class="feature"><b>♡ For You</b><span>Made for every mood</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="contact">
+        <h2>Ready to add a little touch? 🎀</h2>
+        <p>Message us on WhatsApp to check colours, availability and place your order.</p>
+        <div class="actions">
+          <a class="btn secondary" href="https://wa.me/919514314625?text=Hi%20Tied%20%26%20Touched%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank">Chat with us on WhatsApp</a>
+          <a class="btn secondary" href="https://www.instagram.com/tied_and_touched/" target="_blank">Follow on Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Tied & Touched • Little clips, Big happiness
+    <div class="socials">
+      <a href="https://www.instagram.com/tied_and_touched/" target="_blank">Instagram</a>
+      <a href="https://wa.me/919514314625" target="_blank">WhatsApp</a>
+    </div>
+  </footer>
+</body>
+</html>
